@@ -1,41 +1,57 @@
+Adobe Commerce Logo
+Site Creator
+Site Health
+Config Generator
+Config Generator
+This tool will automatically detect your environment type (PaaS, ACCS, or ACO) and generate a storefront configuration object based on your GraphQL API endpoint. You can copy the output and deploy it via the config service (recommended for production), or use it as a config.json in a feature branch of your code repo for local development and branch testing. Note: a config.json on a code branch takes precedence over the config service, so it should not be committed to main. See public config reference for the full schema. Enter your GraphQL API URL below to get started.
+
+GraphQL API Endpoint
+https://na1-sandbox.api.commerce.adobe.com/LHXDm5vzLUDbiShkwhvQoE/graphql
+Generate
+Copy
+
+Enable B2B Features (commerce-b2b-enabled, commerce-companies-enabled)
+ACCS configuration generated successfully!
+
 {
   "public": {
     "default": {
-      "commerce-core-endpoint": "https://www.aemshop.net/graphql",
-      "commerce-endpoint": "https://www.aemshop.net/cs-graphql",
-      "commerce-assets-enabled": false,
+      "commerce-endpoint": "https://na1-sandbox.api.commerce.adobe.com/LHXDm5vzLUDbiShkwhvQoE/graphql",
       "headers": {
         "all": {
           "Store": "default"
         },
         "cs": {
-          "Magento-Store-Code": "main_website_store",
-          "Magento-Store-View-Code": "default",
-          "Magento-Website-Code": "base",
-          "x-api-key": "4dfa19c9fe6f4cccade55cc5b3da94f7",
-          "Magento-Environment-Id": "f38a0de0-764b-41fa-bd2c-5bc2f3c7b39a"
+          "Magento-Store-Code": "citisignal",
+          "Magento-Store-View-Code": "Citisignal",
+          "Magento-Website-Code": "citisignal"
         }
       },
+      "commerce-b2b-enabled": false,
+      "commerce-companies-enabled": false,
+      "commerce-assets-enabled": true,
+      "adobe-commerce-optimizer": false,
       "analytics": {
         "base-currency-code": "USD",
         "environment": "Testing",
-        "environment-id": "f38a0de0-764b-41fa-bd2c-5bc2f3c7b39a",
-        "store-code": "main_website_store",
-        "store-id": 1,
-        "store-name": "Main Website Store",
-        "store-url": "https://www.aemshop.net",
-        "store-view-code": "default",
-        "store-view-id": 1,
-        "store-view-name": "Default Store View",
-        "website-code": "base",
-        "website-id": 1,
-        "website-name": "Main Website"
+        "environment-id": "LHXDm5vzLUDbiShkwhvQoE",
+        "store-code": "citisignal",
+        "store-id": "citisignal",
+        "store-name": "Citi Signal",
+        "store-url": "https://coresaas-subgraph-external:8000/LHXDm5vzLUDbiShkwhvQoE/",
+        "store-view-code": "Citisignal",
+        "store-view-id": "Citisignal",
+        "store-view-name": "Citi Signal",
+        "website-code": "citisignal",
+        "website-id": "citisignal",
+        "website-name": "CitiSignal"
       },
       "plugins": {
         "picker": {
-           "rootCategory": "YOUR_ROOT_CATEGORY_ID"
-         }
+          "rootCategory": "2"
+        }
       }
     }
   }
 }
+Discord
